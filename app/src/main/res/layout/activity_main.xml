@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    >
+
+    <EditText
+        android:id="@+id/edit_value_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:autofillHints="Enter Name"
+        android:hint="@string/masukan_angka_1"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/edit_value_2"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_value_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/masukan_angka_2"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radio_operators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_value_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <RadioButton
+            android:id="@+id/radio_addition"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="+"
+            android:textStyle="bold"
+            /><RadioButton
+            android:id="@+id/radio_subtraction"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="-"
+            android:textStyle="bold"
+            /><RadioButton
+            android:id="@+id/radio_multiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="x"
+            android:textStyle="bold"
+            /><RadioButton
+            android:id="@+id/radio_division"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=":"
+            android:textStyle="bold"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radio_operators"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/hitung" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/hasil" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kalkulator Sederhana</string>
+    <string name="masukan_angka_1">Masukan Angka 1</string>
+    <string name="masukan_angka_2">Masukan Angka 2</string>
+    <string name="hitung">Hitung</string>
+    <string name="hasil">Hasil</string>
+</resources>
